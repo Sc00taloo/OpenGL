@@ -1,0 +1,11 @@
+﻿  main.c
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(33,25): warning C4244: =: преобразование "double" в "FLOAT", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(39,17): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(40,39): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(54,17): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(55,39): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(169,12): warning C4244: return: преобразование "WPARAM" в "int", возможна потеря данных
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ WindowProc в функции WinMain.
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ EnableOpenGL в функции WinMain.
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ DisableOpenGL в функции WinMain.
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\x64\Debug\lr2.exe : fatal error LNK1120: неразрешенных внешних элементов: 3

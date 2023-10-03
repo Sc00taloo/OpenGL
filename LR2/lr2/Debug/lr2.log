@@ -1,0 +1,9 @@
+﻿  main.c
+C:\Users\User\Documents\GitHub\OpenGL\LR2\ogl_begin\main.c(33,25): warning C4244: =: преобразование "double" в "FLOAT", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\ogl_begin\main.c(39,17): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\ogl_begin\main.c(40,39): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\ogl_begin\main.c(54,17): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\ogl_begin\main.c(55,39): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\ogl_begin\main.c(185,17): warning C4305: *=: усечение из "double" в "float"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\ogl_begin\main.c(188,17): warning C4305: =: усечение из "double" в "float"
+  ogl_begin.vcxproj -> C:\Users\User\Documents\GitHub\OpenGL\LR2\Debug\ogl_begin.exe

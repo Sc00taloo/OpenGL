@@ -1,11 +1,316 @@
 ﻿  main.c
-C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(33,25): warning C4244: =: преобразование "double" в "FLOAT", возможна потеря данных
-C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(39,17): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(40,39): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(54,17): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(55,39): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(169,12): warning C4244: return: преобразование "WPARAM" в "int", возможна потеря данных
-main.obj : error LNK2019: ссылка на неразрешенный внешний символ WindowProc в функции WinMain.
-main.obj : error LNK2019: ссылка на неразрешенный внешний символ EnableOpenGL в функции WinMain.
-main.obj : error LNK2019: ссылка на неразрешенный внешний символ DisableOpenGL в функции WinMain.
-C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\x64\Debug\lr2.exe : fatal error LNK1120: неразрешенных внешних элементов: 3
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(58,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(58,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(66,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(66,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(67,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(67,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(67,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(72,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(76,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(76,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(76,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(80,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(86,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(86,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(94,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(94,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(95,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(95,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(95,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(100,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(104,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(104,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(104,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(108,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(114,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(114,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(122,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(122,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(123,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(123,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(123,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(128,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(132,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(132,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(132,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(136,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(142,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(142,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(142,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(146,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(150,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(150,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(150,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(151,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(151,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(151,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(155,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(156,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(160,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(160,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(160,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(164,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(170,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(170,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(170,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(174,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(178,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(178,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(178,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(179,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(179,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(179,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(183,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(184,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(188,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(188,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(188,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(192,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(56,8): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(60,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(61,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(69,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(70,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(78,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(79,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(88,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(89,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(97,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(98,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(106,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(107,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(116,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(117,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(125,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(126,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(134,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(135,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(144,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(145,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(153,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(154,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(162,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(163,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(172,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(173,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(181,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(182,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(190,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(191,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(200,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(200,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(208,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(208,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(209,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(209,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(209,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(214,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(218,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(218,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(218,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(222,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(228,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(228,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(236,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(236,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(237,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(237,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(237,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(242,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(246,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(246,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(246,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(250,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(256,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(256,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(264,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(264,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(265,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(265,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(265,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(270,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(274,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(274,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(274,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(278,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(284,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(284,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(284,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(288,24): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(292,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(292,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(292,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(293,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(293,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(293,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(297,24): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(298,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(302,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(302,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(302,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(306,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(311,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(311,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(311,28): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(315,24): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(319,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(319,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(319,28): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(320,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(320,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(320,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(324,24): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(325,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(329,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(329,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(329,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(333,25): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(198,8): warning C4305: инициализация: усечение из "double" в "float"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(202,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(203,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(211,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(212,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(220,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(221,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(230,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(231,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(239,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(240,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(248,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(249,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(258,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(259,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(267,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(268,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(276,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(277,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(286,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(287,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(295,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(296,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(304,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(305,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(313,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(314,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(322,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(323,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(331,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(332,30): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(341,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(342,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(342,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(343,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(347,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(350,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(353,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(354,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(354,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(355,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(359,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(359,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(360,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(361,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(362,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(362,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(365,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(366,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(366,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(367,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(367,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(368,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(372,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(373,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(380,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(380,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(381,21): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(382,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(383,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(386,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(387,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(388,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(389,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(392,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(392,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(393,21): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(394,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(395,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(398,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(398,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(399,21): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(400,21): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(401,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(401,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(404,21): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(405,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(406,20): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(407,21): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(410,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(410,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(411,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(412,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(413,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(413,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(419,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(419,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(420,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(420,24): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(420,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(421,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(421,24): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(421,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(422,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(422,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(425,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(425,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(426,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(426,24): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(426,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(427,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(427,24): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(427,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(428,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(428,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(434,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(434,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(434,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(435,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(435,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(435,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(436,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(436,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(436,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(437,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(437,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(437,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(440,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(440,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(440,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(441,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(441,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(441,31): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(442,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(442,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(442,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(443,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(443,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(443,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(446,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(446,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(446,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(447,18): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(447,23): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(447,30): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(448,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(448,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(448,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(449,17): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(449,22): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(449,29): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(529,14): warning C4244: функция: преобразование "int" в "GLfloat", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(530,14): warning C4244: функция: преобразование "int" в "GLfloat", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(531,14): warning C4244: функция: преобразование "int" в "GLfloat", возможна потеря данных
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(532,16): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(532,21): warning C4305: функция: усечение из "double" в "GLfloat"
+C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\main.c(590,12): warning C4244: return: преобразование "WPARAM" в "int", возможна потеря данных
+  lr2.vcxproj -> C:\Users\User\Documents\GitHub\OpenGL\LR2\lr2\x64\Debug\lr2.exe

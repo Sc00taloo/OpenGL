@@ -57,7 +57,7 @@ def screen():
 glutInit() 
 glutInitDisplayMode(GLUT_RGBA)
 glutInitWindowSize(800, 400)
-wind = glutCreateWindow("OpenGL Coding Practice")
+wind = glutCreateWindow("OpenGL LR1")
 glutDisplayFunc(screen)
 glutIdleFunc(screen)
 glutMainLoop()

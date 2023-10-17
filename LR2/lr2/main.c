@@ -1,68 +1,453 @@
 #include <windows.h>
 #include <gl/gl.h>
 #include <math.h>
+GLfloat rtri;
 
 #pragma comment(lib, "opengl32.lib")
+
+int xrot = 0;
+int yrot = 0;
+int zrot = 0;
 
 LRESULT CALLBACK WindowProc(HWND, UINT, WPARAM, LPARAM);
 void EnableOpenGL(HWND hwnd, HDC*, HGLRC*);
 void DisableOpenGL(HWND, HDC, HGLRC);
 
-POINTFLOAT* mas = NULL;
-int n;
-float scaleY = 1;
-int k = 0;
-
-void DrawOs(float x) {
-	glPushMatrix();
-	glRotatef(x, 0, 0, 1);
-	glBegin(GL_LINES);
-	glVertex2f(-1, 0);
-	glVertex2f(1, 0);
+void containre() {
+	glBegin(GL_QUADS); // перед
+	glVertex3f(0, 0, 0);
+	glVertex3f(3, 0, 0);
+	glVertex3f(3, 1, 0);
+	glVertex3f(0, 1, 0);
 	glEnd();
-	glPopMatrix();
+	glBegin(GL_QUADS); // вверх
+	glVertex3f(0, 1, 0);
+	glVertex3f(3, 1, 0);
+	glVertex3f(3, 1, -0.5);
+	glVertex3f(0, 1, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); // зад
+	glVertex3f(0, 0, -0.5);
+	glVertex3f(3, 0, -0.5);
+	glVertex3f(3, 1, -0.5);
+	glVertex3f(0, 1, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); // низ
+	glVertex3f(0, 0, 0);
+	glVertex3f(3, 0, 0);
+	glVertex3f(3, 0, -0.5);
+	glVertex3f(0, 0, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); // лево
+	glVertex3f(0, 0, 0);
+	glVertex3f(0, 1, 0);
+	glVertex3f(0, 1, -0.5);
+	glVertex3f(0, 0, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); //право
+	glVertex3f(3, 0, 0);
+	glVertex3f(3, 1, 0);
+	glVertex3f(3, 1, -0.5);
+	glVertex3f(3, 0, -0.5);
+	glEnd();
 }
 
-void fun(float start, float finish, int count) {
-	n = count;
-	mas = realloc(mas, sizeof(*mas) * n);
-	float dx = (finish - start) / (n - 1);
-
-	for (int i = 0; i < n; ++i) {
-		mas[i].x = start;
-		mas[i].y = tan(start) + 5 * sin(start);
-		start += dx;
-	}
-}
-
-void ShowLines() {
-	float sx = 2.0 / (mas[n - 1].x - mas[0].x);
-	float dx = (mas[n - 1].x + mas[0].x) * 0.5;
-	glPushMatrix();
-	glScalef(sx, scaleY, 1);
-	glTranslatef(-dx, 0, 0);
-
-	glBegin(GL_LINE_STRIP);
-	for (int i = 0; i < n; ++i) {
-		glVertex2f(mas[i].x, mas[i].y);
+void wheels_down() {
+	float a = 3.14 * 2 / 10;
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(2.2, -0.2, -0.5);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 2.2;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.5);
 	}
 	glEnd();
-	glPopMatrix();
-}
-
-void ShowPoints() {
-	float sx = 2.0 / (mas[n - 1].x - mas[0].x);
-	float dx = (mas[n - 1].x + mas[0].x) * 0.5;
-	glPushMatrix();
-	glScalef(sx, scaleY, 1);
-	glTranslatef(-dx, 0, 0);
-
-	glBegin(GL_POINTS);
-	for (int i = 0; i < n; ++i) {
-		glVertex2f(mas[i].x, mas[i].y);
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(2.2, -0.2, -0.5);
+	glVertex3f(2.2, -0.2, -0.45);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 + 2.2;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.5);
+		glVertex3f(x, y, -0.45);
 	}
 	glEnd();
-	glPopMatrix();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(2.2, -0.2, -0.45);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 2.2;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.45);
+	}
+	glEnd();
+
+
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(1.8, -0.2, -0.5);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 1.8;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.5);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(1.8, -0.2, -0.5);
+	glVertex3f(1.8, -0.2, -0.45);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 + 1.8;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.5);
+		glVertex3f(x, y, -0.45);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(1.8, -0.2, -0.45);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 1.8;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.45);
+	}
+	glEnd();
+
+
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(1.4, -0.2, -0.5);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 1.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.5);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(1.4, -0.2, -0.5);
+	glVertex3f(1.4, -0.2, -0.45);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 + 1.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.5);
+		glVertex3f(x, y, -0.45);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(1.4, -0.2, -0.45);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 1.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.45);
+	}
+	glEnd();
+
+
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(-0.6, -0.2, -0.51);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 - 0.6;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.51);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(-0.6, -0.2, -0.51);
+	glVertex3f(-0.6, -0.2, -0.45);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 - 0.6;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.51);
+		glVertex3f(x, y, -0.45);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(-0.6, -0.2, -0.45);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 - 0.6;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.45);
+	}
+	glEnd();
+
+
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(0.4, -0.2, -0.51);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 0.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.51);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(0.4, -0.2, -0.51);
+	glVertex3f(0.4, -0.2, -0.45);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 + 0.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.51);
+		glVertex3f(x, y, -0.45);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(0.4, -0.2, -0.45);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 0.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.45);
+	}
+	glEnd();
+}
+
+void wheels_up() {
+	float a = 3.14 * 2 / 10;
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(2.2, -0.2, 0);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 2.2;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(2.2, -0.2, 0);
+	glVertex3f(2.2, -0.2, -0.05);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 + 2.2;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0);
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(2.2, -0.2, -0.05);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 2.2;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+
+
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(1.8, -0.2, 0);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 1.8;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(1.8, -0.2, 0);
+	glVertex3f(1.8, -0.2, -0.05);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 + 1.8;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0);
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(1.8, -0.2, -0.05);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 1.8;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+
+
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(1.4, -0.2, 0);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 1.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(1.4, -0.2, 0);
+	glVertex3f(1.4, -0.2, -0.05);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 + 1.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0);
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(1.4, -0.2, -0.05);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 1.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+
+
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(-0.6, -0.2, 0.01);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 - 0.6;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0.01);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(-0.6, -0.2, 0.01);
+	glVertex3f(-0.6, -0.2, -0.05);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 - 0.6;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0.01);
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(-0.6, -0.2, -0.05);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 - 0.6;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(0.4, -0.2, 0.01);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 0.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0.01);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_STRIP);
+	glVertex3f(0.4, -0.2, 0.01);
+	glVertex3f(0.4, -0.2, -0.05);
+	for (int i = -1; i < 20; ++i) {
+		float x = sin(a * i) * 0.2 + 0.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, 0.01);
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+	glBegin(GL_TRIANGLE_FAN);
+	glVertex3f(0.4, -0.2, -0.05);
+	for (int i = -1; i < 10; ++i) {
+		float x = sin(a * i) * 0.2 + 0.4;
+		float y = cos(a * i) * 0.2 - 0.2;
+		glVertex3f(x, y, -0.05);
+	}
+	glEnd();
+
+}
+
+void body_down() {
+	glBegin(GL_QUADS); //перед
+	glVertex3f(-0.2, 0, 0);
+	glVertex3f(-0.2, -0.1, 0);
+	glVertex3f(0.5, -0.1, 0);
+	glVertex3f(0.5, 0, 0);
+	glEnd();
+	glBegin(GL_QUADS); // вверх
+	glVertex3f(-0.2, 0, 0);
+	glVertex3f(0.5, 0, 0);
+	glVertex3f(0.5, 0, -0.5);
+	glVertex3f(-0.2, 0, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); //зад
+	glVertex3f(-0.2, 0, -0.5);
+	glVertex3f(-0.2, -0.1, -0.5);
+	glVertex3f(0.5, -0.1, -0.5);
+	glVertex3f(0.5, 0, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); //низ
+	glVertex3f(-0.2, -0.1, 0);
+	glVertex3f(0.5, -0.1, 0);
+	glVertex3f(0.5, -0.1, -0.5);
+	glVertex3f(-0.2, -0.1, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); //лево
+	glVertex3f(-0.2, 0, 0);
+	glVertex3f(-0.2, -0.1, 0);
+	glVertex3f(-0.2, -0.1, -0.5);
+	glVertex3f(-0.2, 0, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); //право
+	glVertex3f(0.5, 0, 0);
+	glVertex3f(0.5, -0.1, 0);
+	glVertex3f(0.5, -0.1, -0.5);
+	glVertex3f(0.5, 0, -0.5);
+	glEnd();
+}
+
+void body() {
+	glBegin(GL_QUADS); // перед
+	glVertex3f(-0.2, -0.1, 0);
+	glVertex3f(-1, -0.1, 0);
+	glVertex3f(-1, 0.9, 0);
+	glVertex3f(-0.2, 1, 0);
+	glEnd();
+	glBegin(GL_QUADS); // вверх
+	glVertex3f(-0.2, 1, 0);
+	glVertex3f(-1, 0.9, 0);
+	glVertex3f(-1, 0.9, -0.5);
+	glVertex3f(-0.2, 1, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); // зад
+	glVertex3f(-0.2, -0.1, -0.5);
+	glVertex3f(-1, -0.1, -0.5);
+	glVertex3f(-1, 0.9, -0.5);
+	glVertex3f(-0.2, 1, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); // низ
+	glVertex3f(-0.2, -0.1, 0);
+	glVertex3f(-1, -0.1, 0);
+	glVertex3f(-1, -0.1, -0.5);
+	glVertex3f(-0.2, -0.1, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); // лево
+	glVertex3f(-1, -0.1, 0);
+	glVertex3f(-1, 0.9, 0);
+	glVertex3f(-1, 0.9, -0.5);
+	glVertex3f(-1, -0.1, -0.5);
+	glEnd();
+	glBegin(GL_QUADS); // право
+	glVertex3f(-0.2, -0.1, 0);
+	glVertex3f(-0.2, 1, 0);
+	glVertex3f(-0.2, 1, -0.5);
+	glVertex3f(-0.2, -0.1, -0.5);
+	glEnd();
+}
+
+void fari() {
+	glBegin(GL_QUADS);
+	glVertex3f(-1.01, 0.0, -0.05);
+	glVertex3f(-1.01, 0.09, -0.05);
+	glVertex3f(-1.01, 0.09, -0.1);
+	glVertex3f(-1.01, 0.0, -0.1);
+	glEnd();
+	glBegin(GL_QUADS);
+	glVertex3f(-1.01, 0.0, -0.4);
+	glVertex3f(-1.01, 0.09, -0.4);
+	glVertex3f(-1.01, 0.09, -0.45);
+	glVertex3f(-1.01, 0.0, -0.45);
+	glEnd();
+}
+
+void glass() {
+	glBegin(GL_QUADS);
+	glVertex3f(-1.01, 0.3, -0.05);
+	glVertex3f(-1.01, 0.8, -0.05);
+	glVertex3f(-1.01, 0.8, -0.45);
+	glVertex3f(-1.01, 0.3, -0.45);
+	glEnd();
+	glBegin(GL_QUADS);
+	glVertex3f(-0.35, 0.8, -0.501);
+	glVertex3f(-0.35, 0.4, -0.501);
+	glVertex3f(-0.8, 0.4, -0.501);
+	glVertex3f(-0.8, 0.8, -0.501);
+	glEnd();
+	glBegin(GL_QUADS);
+	glVertex3f(-0.35, 0.8, 0.001);
+	glVertex3f(-0.35, 0.4, 0.001);
+	glVertex3f(-0.8, 0.4, 0.001);
+	glVertex3f(-0.8, 0.8, 0.001);
+	glEnd();
 }
 
 int WINAPI WinMain(HINSTANCE hInstance,
@@ -114,8 +499,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 
 	/* enable OpenGL for the window */
 	EnableOpenGL(hwnd, &hDC, &hRC);
-
-	fun(-20, 20, 200);
+	glEnable(GL_DEPTH_TEST);
 
 	/* program main loop */
 	while (!bQuit)
@@ -138,23 +522,60 @@ int WINAPI WinMain(HINSTANCE hInstance,
 		{
 			/* OpenGL animation code goes here */
 
-			glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
-			glClear(GL_COLOR_BUFFER_BIT);
+			glClearColor(0.7f, 1.0f, 0.7f, 0.0f);
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 			glLoadIdentity();
-			glColor3f(1, 0, 0);
-			DrawOs(0);
-			glColor3f(0, 1, 0);
-			DrawOs(90);
+			glRotatef(xrot, 1, 0, 0);
+			glRotatef(yrot, 0, 1, 0);
+			glRotatef(zrot, 0, 0, 1);
+			glScalef(0.3, 0.3, 1);
+			glPushMatrix();
+			glColor3f(0.4f, 0.6f, 0.88f);
+			containre();
+			glPopMatrix();
 
-			glColor3f(1, 1, 0);
- 			if (GetKeyState(VK_SPACE)) {
-				ShowPoints();			
-			}
-			else {
-				ShowLines();
-			}
+			glPushMatrix();
+			glColor3f(1.0f, 0.95f, 0.95f);
+			body_down();
+			glPopMatrix();
+
+			glPushMatrix();
+			body();
+			glPopMatrix();
+
+			glPushMatrix();
+			glColor3f(1.0f, 1.0f, 0.0f);
+			fari();
+			glPopMatrix();
+
+			glPushMatrix();
+			glColor3f(0.7f, 0.9f, 0.93f);
+			glass();
+			glPopMatrix();
+
+			glPushMatrix();
+			glColor3f(0, 0, 0);
+			wheels_up();
+			wheels_down();
+			glPopMatrix();
+			if (GetKeyState(VK_UP) == 1) {
+				xrot += 1;
+			};
+
+			if (GetKeyState(VK_DOWN)) {
+				xrot -= 1;
+			};
+
+			if (GetKeyState(VK_RIGHT)) {
+				yrot -= 1;
+			};
+
+			if (GetKeyState(VK_LEFT)) {
+				yrot += 1;
+			};
 			SwapBuffers(hDC);
+			//rtri += 0.2;
 
 			Sleep(1);
 		}
@@ -169,6 +590,7 @@ int WINAPI WinMain(HINSTANCE hInstance,
 	return msg.wParam;
 }
 
+
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
 	switch (uMsg)
@@ -176,19 +598,6 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 	case WM_CLOSE:
 		PostQuitMessage(0);
 		break;
-
-	case WM_MOUSEWHEEL:
-		if ((int)wParam > 0) {
-			scaleY *= 1.5;
-		}
-		else {
-			scaleY *= 0.7;
-		}
-		if (scaleY < 0.02) {
-			scaleY = 0.02;
-		}
-		break;
-
 
 	case WM_DESTROY:
 		return 0;
